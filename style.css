@@ -18,7 +18,6 @@ html
     --Slate-300: hsl(212, 45%, 89%);
     --Slate-500: hsl(216, 15%, 48%);
     --Slate-900: hsl(218, 44%, 22%);
-    --accent-color: #3B82F6;
 
     /* FONT FAMILY */
     --ff-base: "Montserrat", sans-serif;
@@ -32,37 +31,25 @@ body
     min-height: 100vh;
     display: grid;
     place-content: center;
-    background: linear-gradient(to bottom, #8db8fc, #fff);
     color: var(--Slate-900);
+    background-color: var(--Slate-300);
 }
 
-main
+.main__section
 {
     width: 32rem;
-    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     background-color: var(--White);
-    border: .1rem solid var(--Slate-900);
     text-align: center;
     display: grid;
     gap: 2rem;
-    transition: all 0.3s ease-in-out;
-}
-
-main:hover
-{
-    transform: translateY(-3px);
-}
-
-.title
-{
-    border-bottom: .1rem solid var(--Slate-300);
-    padding-bottom: 1rem;
 }
 
 .image
 {
-    width: 80%;
+    width: 100%;
     border-radius: 1rem;
     box-shadow: .1px 1px .5px #333;
 }
@@ -79,21 +66,8 @@ main:hover
     color: var(--Slate-500);
 }
 
-.portfolio__link
+.page__link
 {
-    padding: 1.5rem;
-    font-weight: bold;
-    font-size: 1.6rem;
-    border-radius: 1rem;
-    background-color: var(--accent-color);
-    color: var(--White);
-    transition: all .5s ease-in-out;
-    text-decoration: none;
-}
-
-.portfolio__link:hover
-{
-    transform: translateY(-1.5px);
-    background-color: var(--Slate-900);
-
+    font-style: italic;
+    color:var(--Slate-900);
 }

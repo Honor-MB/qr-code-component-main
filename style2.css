@@ -1,0 +1,148 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--ff-base) ;
+}
+html
+{
+    font-size: 62.5%;
+}
+
+:root
+{
+    /* COLOR */
+
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+    --accent-color: #3B82F6;
+
+    /* FONT FAMILY */
+    --ff-base: "Montserrat", sans-serif;
+
+}
+
+body
+{
+    font-size: 15px;
+    font-weight: 400;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(to bottom, #8db8fc, #fff);
+    color: var(--Slate-900);
+}
+
+.card
+{
+    width: 32rem;
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background-color: var(--White);
+    border: .1rem solid var(--Slate-900);
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+    animation: fadeSlideIn 0.6s ease forwards;
+    /* opacity: 0; */
+}
+
+@keyframes fadeSlideIn {
+    from
+    {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover
+{
+    transform: translateY(-3px);
+}
+
+.title
+{
+    border-bottom: .1rem solid var(--Slate-500);
+    padding-bottom: 1rem;
+}
+
+.image
+{
+    width: 80%;
+    border-radius: 1rem;
+    box-shadow: .1px 1px .5px #333;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from
+    {
+        transform: scale(0);
+    }
+
+    to
+    {
+        transform: scale(1);
+    }
+}
+
+.content__container
+{
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.description
+{
+    color: var(--Slate-500);
+}
+
+.portfolio__link
+{
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background-color: var(--accent-color);
+    color: var(--White);
+    transition: all .5s ease-in-out;
+    text-decoration: none;
+    animation: popIn 2s ease forwards;
+}
+
+@keyframes popIn {
+    from
+    {
+        transform: scale(0.9);
+    }
+
+    to
+    {
+        transform: scale(1);
+    }
+}
+
+.portfolio__link:hover
+{
+    transform: translateY(-1.5px);
+    background-color: var(--Slate-900);
+
+}
+
+.page__link
+{
+    font-style: italic;
+    color:var(--Slate-900);
+}
